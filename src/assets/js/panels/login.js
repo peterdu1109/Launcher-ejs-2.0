@@ -147,7 +147,7 @@ class Login {
                 return
             }
 
-            let azAuth = new AZauth('https://ecomine.valaron.fr/');
+            let azAuth = new AZauth('https://ecomine.valaron.fr');
 
             await azAuth.getAuth(mailInput.value, passwordInput.value).then(async account_connect => {
                 console.log(account_connect);
