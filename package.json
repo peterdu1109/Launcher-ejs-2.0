@@ -1,7 +1,7 @@
 {
     "name": "Ecomine",
     "preductname": "Ecomine Launcher",
-    "version": "1.0.1",
+    "version": "1.0.0",
     "description": "Ecomine modded server launcher",
     "main": "src/app.js",
     "author": "Luuxis/Riptiaz/peterdu1109",
