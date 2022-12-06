@@ -1,11 +1,11 @@
 {
-    "name": "Selvania-Launcher",
-    "preductname": "Selvania Launcher",
-    "version": "1.0.5",
-    "description": "Launcher Mincraft custom (crack, premium)",
+    "name": "Ecomine-Launcher",
+    "preductname": "Ecomine Launcher",
+    "version": "1.0.1",
+    "description": "Launcher Ecomine",
     "main": "src/app.js",
-    "author": "Luuxis",
-    "url": "http://launcher.selvania.fr",
+    "author": "Peterdu1109",
+    "url": "http://launcher.valaron.fr",
     "engines": {
         "node": "16.x.x"
     },
@@ -31,6 +31,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/luuxis/Selvania-Launcher.git"
+        "url": "git+https://github.com/peterdu1109/Launcher-ejs-2.0.git"
     }
 }
