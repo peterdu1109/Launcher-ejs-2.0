@@ -5,10 +5,11 @@
 
 const pkg = require('../package.json');
 const fetch = require("node-fetch")
+const convert = require("xml-js")
 let url = pkg.user ? `${pkg.url}/${pkg.user}` : pkg.url
 
 let config = `${url}/launcher/config-launcher/config.json`;
-let news = `${url}/launcher/news-launcher/assets/php/news/GetNews.php`;
+let news = `https://centralcorp.fr/api/rss`;
 
 class Config {
     GetConfig() {
@@ -22,17 +23,28 @@ class Config {
     }
 
     async GetNews() {
-        let rss = await fetch(news);
-        if (rss.status === 200) {
-            try {
-                let news = await rss.json();
-                return news;
-            } catch (error) {
-                return false;
+        let rss = await fetch(news).then(res => res.text());
+        let rssparse = JSON.parse(convert.xml2json(rss, { compact: true }));
+        let data = [];
+        if (rssparse.rss.channel.item.length) {
+            for (let i of rssparse.rss.channel.item) {
+                let item = {}
+                item.title = i.title._text;
+                item.content = i['content:encoded']._text;
+                item.author = i['dc:creator']._text;
+                item.publish_date = i.pubDate._text;
+                data.push(item);
             }
         } else {
-            return false;
+            let item = {}
+            item.title = rssparse.rss.channel.item.title._text;
+            item.content = rssparse.rss.channel.item['content:encoded']._text;
+            item.author = rssparse.rss.channel.item['dc:creator']._text;
+            item.publish_date = rssparse.rss.channel.item.pubDate._text;
+            data.push(item);
+
         }
+        return data;
     }
 }
 
