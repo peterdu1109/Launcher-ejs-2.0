@@ -1,11 +1,11 @@
 {
-    "name": "CentralCorp",
-    "preductname": "CentralCorp Launcher",
-    "version": "2.1.5",
-    "description": "CentralCorp modded server launcher",
+    "name": "Ecomine",
+    "preductname": "Ecomine Launcher",
+    "version": "1.0.1",
+    "description": "Ecomine modded server launcher",
     "main": "src/app.js",
-    "author": "Luuxis/Riptiaz",
-    "url": "http://129.151.251.180",
+    "author": "Luuxis/Riptiaz/peterdu1109",
+    "url": "https://launcher.valaron.fr",
     "engines": {
         "node": "16.x.x"
     },
@@ -32,6 +32,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Riptiaz/CentralCorp-Launcher.git"
+        "url": "git+https://github.com/peterdu1109/Launcher-ejs-2.0.git"
     }
 }
