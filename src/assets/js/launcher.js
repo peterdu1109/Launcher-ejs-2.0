@@ -8,7 +8,7 @@
 // libs 
 const fs = require('fs');
 const { Microsoft, Mojang, AZauth } = require('minecraft-java-core');
-const AZAuth = new AZauth('https://centralcorp.fr');
+const AZAuth = new AZauth('https://ecomine.valaron.fr');
 const { ipcRenderer } = require('electron');
 
 import { config, logger, changePanel, database, addAccount, accountSelect } from './utils.js';

@@ -9,7 +9,7 @@ const convert = require("xml-js")
 let url = pkg.user ? `${pkg.url}/${pkg.user}` : pkg.url
 
 let config = `${url}/launcher/config-launcher/config.json`;
-let news = `https://centralcorp.fr/api/rss`;
+let news = `https://ecomine.valaron.fr/api/rss`;
 
 class Config {
     GetConfig() {
